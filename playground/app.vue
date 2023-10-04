@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button v-ripple>Click</button>
+    <TButton label="CLICK" />
+    <!-- <TLoader /> -->
   </div>
 </template>
 

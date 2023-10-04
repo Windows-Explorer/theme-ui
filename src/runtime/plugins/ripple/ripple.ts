@@ -4,7 +4,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 	nuxtApp.vueApp.directive("ripple", {
 		mounted: async (element: HTMLElement, binding) => {
 			element.addEventListener("click", async (event) => {
-				const timeOut = binding.value || 2000
+				const timeOut = Number(binding.value) || 2000
 				const diameter = Math.max(element.clientWidth, element.clientHeight)
 				const radius = diameter / 2
 				const leftOffset = event.pageX - (element.getBoundingClientRect().left + scrollX) - radius
@@ -24,6 +24,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 					rippleNode.remove()
 				}, timeOut)
 			})
-		}
+		},
 	})
 })
