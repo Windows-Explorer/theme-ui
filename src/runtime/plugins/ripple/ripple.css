@@ -22,7 +22,7 @@ html, body, #__nuxt {
     height: 100%;
     width: 100%;
     margin: 0px;
-    background-color: #111;
+    /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
